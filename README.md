@@ -12,7 +12,9 @@ Ralink Wireless Adapter Driver
 
 运行 脚本 编译驱动（Ubuntu 12.04下编过）
 
-sudo ./miwifi_build.sh 编译驱动 如果没有看到 错误 Error 字样，就算可以了。
+./build.sh 编译驱动 如果没有看到 错误 Error 字样，就算可以了。
+
+sudo make install
 
 步骤三 配置DHCP服务
 
@@ -27,10 +29,10 @@ sudo ./miwifi_build.sh 编译驱动 如果没有看到 错误 Error 字样，就
 
 步骤四 加载驱动
 
-    root权限 运行脚本 加载驱动 和 设置DHCP服务器 和 设置ip转发规则（我平常用eth0来上网，所以有需要的同学自行更改） sudo ./miwifi_work.sh
+    root权限 运行脚本 加载驱动 和 设置DHCP服务器 和 设置ip转发规则（我平常用eth0来上网，所以有需要的同学自行更改） sudo ./ap_work.sh
 
 步骤五 配置MiWiFi
 
-    如果一切顺利，你会搜到一个 网络名 MiWiFi_SuMang 密码 52xiaomi
+    如果一切顺利，你会搜到一个 网络名 portablewifi 密码 12345678
 
 PS：如果修改成你们想要的SSID和密码 方法一：修改mt7601u/etc/Wireless/RT2870AP/RT2870AP.dat ，重新编译。。 方法二：直接修改/etc/Wireless/RT2870AP/RT2870AP.dat
